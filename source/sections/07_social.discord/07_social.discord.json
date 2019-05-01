@@ -1,0 +1,50 @@
+{
+  "weight" : 0.0,
+  "a_assets" : [
+    {
+      "label" : "ASSET",
+      "start" : 63,
+      "end" : 66,
+      "text" : "neo"
+    },
+    {
+      "start" : 79,
+      "end" : 84,
+      "text" : "gives",
+      "label" : "ASSET"
+    },
+    {
+      "label" : "ASSET",
+      "start" : 262,
+      "end" : 266,
+      "text" : "link"
+    }
+  ],
+  "a_misc" : null,
+  "id" : "1556031682_discord_da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "created" : "1556031682",
+  "source" : "alibugra@Discord",
+  "a_impact" : 0.0,
+  "a_persons" : null,
+  "a_locations" : null,
+  "guild_id" : "382937847893590016",
+  "user" : "alibugra",
+  "message" : "Thanks, in order to deploy any tutorial smart contract current neo-gui program gives an error which is “Execution terminated in fault state.”\n\nI guess there is a bug on it. Any neo-gui exe without bug to deploy my smart contracts? Could you share a download link with me?",
+  "a_sentiment" : -5.25536464946848,
+  "a_exchanges" : null,
+  "channel_id" : "393072926556946433",
+  "pub_date" : "1556031682",
+  "a_crypto_assets" : [
+    "NEO"
+  ],
+  "a_companies" : null,
+  "crawler" : "discord",
+  "a_tags" : [
+    "neo",
+    "gives",
+    "link",
+    "NEO",
+    "GIVES",
+    "LINK"
+  ]
+}

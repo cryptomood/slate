@@ -1,0 +1,50 @@
+# <type>.sentiment
+
+Sentiment events are divided to two groups:
+
+Event | Description
+--------- | ----------- | -----------
+news.sentiment | sentiment data only for articles - aggregated sentiment from news.article events
+social.sentiment | sentiment data for other (all social types) entries
+
+Their payload is the same.
+
+> Example data
+ 
+```json
+<%= partial "sections/09_sentiments/09_sentiments.json" %>
+```
+### Example entry
+
+Key | Type | Description
+--------- | ----------- | -----------
+id | string | unique identifier
+time | string | timestamp representing start of the timeframe
+resolution | string | constant representing timeframe width - M1 or H1
+asset | string | crypto asset
+negative_sum | number | sum of all negative values
+negative_count | number | counted negative occurences
+positive_sum | number | sum of all positive values
+positive_count | number | counted positive occurences
+sentiment_avg | number |
+open_sentiment_average | number |
+high_sentiment_average | number |
+low_sentiment_average | number |
+close_sentiment_average | number |
+
+[](https://en.wikipedia.org/wiki/Open-high-low-close_chart)
+<aside class="notice">
+Last four keys represent [OHLC chart](https://en.wikipedia.org/wiki/Open-high-low-close_chart)
+</aside>
+
+> Subscribing to sentiment event
+
+```javascript
+var subject = "news.sentiment"; // or "social.sentiment
+wsConnection.addEventListener('message', function (event) {
+  var parsed = JSON.parse(event.data)
+  if (parsed.subject === subject) {
+    console.log(parsed.data)
+  }
+})
+```

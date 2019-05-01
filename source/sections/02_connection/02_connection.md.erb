@@ -1,0 +1,37 @@
+# Connection
+
+We provide api data via websockets.
+For the most part, in the events we are using ‘news’ and ‘social’ prefixes/suffixes to distinguish between two main categories.
+The latter is divided into subcategories, mostly because of different message types.
+These subcategories are then named after specific social network - ‘twitter’, ‘reddit’, ‘bitmex’, ‘discord’, ‘telegram’.
+
+Each connection should be using provided api key, be it currently available websocket api or request-response based json api,
+which is intended for the future.
+
+### Connection string
+
+`<protocol>://api.cryptomood.com:<port>/?apiKey=<apiKey>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+protocol | ws or wss
+port | 80 or 433 - non secure or secure tls connection
+apiKey | the identification string which should be provided for your account
+
+> Connection via native websocket implementation 
+
+```javascript
+var apiKey="0123456789"; // use your own key
+var wsConnection = new WebSocket('wss://api.cryptomood.com?apiKey=' + apiKey);
+```
+
+> After the successful connection you can use subscribtions as stated in sections below
+
+```javascript
+var eventName="eventName"
+wsConnection.addEventListener('message', function (event) {
+    ...
+});
+```

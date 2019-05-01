@@ -1,0 +1,41 @@
+{
+  "created" : "1556031787",
+  "message" : "Crypto Industry Matures as Bitcoin Exchange Reopens After $60 Million Hack\n\nhttps://www.ccn.com/crypto-bitcoin-exchange-reopens-60m-hack-is-good-for-the-industry",
+  "a_impact" : 0.0,
+  "a_crypto_assets" : [
+    "BITCOIN"
+  ],
+  "a_misc" : null,
+  "id" : "1556031786_telegram_da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "pub_date" : "1556031786",
+  "a_assets" : [
+    {
+      "end" : 34,
+      "text" : "Bitcoin",
+      "label" : "ASSET",
+      "start" : 27
+    },
+    {
+      "label" : "ASSET",
+      "start" : 103,
+      "end" : 110,
+      "text" : "bitcoin"
+    }
+  ],
+  "weight" : 0.73284998237842,
+  "channel_subscriber_count" : 9515,
+  "a_sentiment" : 5.19171301687894,
+  "a_exchanges" : null,
+  "a_tags" : [
+    "Bitcoin",
+    "bitcoin",
+    "BITCOIN"
+  ],
+  "channel_id" : 1005254228,
+  "user" : "",
+  "source" : "@AltCoin",
+  "crawler" : "telegram",
+  "a_persons" : null,
+  "a_companies" : null,
+  "a_locations" : null
+}

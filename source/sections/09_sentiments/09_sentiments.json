@@ -1,0 +1,15 @@
+{
+  "id": "1556733600_H1_DOGECOIN",
+  "time": "1556733600",
+  "resolution": "H1",
+  "asset": "DOGECOIN",
+  "negative_sum": -340.61834373816833,
+  "negative_count": 3,
+  "positive_sum": 197.99581331631828,
+  "positive_count": 10,
+  "sentiment_avg": -10.97096387860385,
+  "open_sentiment_average": 1.1909851624837877,
+  "high_sentiment_average": 9.294240436988215,
+  "low_sentiment_average": -9.627507196620579,
+  "close_sentiment_average": 9.294240436988215
+}

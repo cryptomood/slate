@@ -1,0 +1,72 @@
+{
+  "id": "1556732616_bitcoinwarriornet_f151e666c7f984a035a428c15a5a0605bcb4debe",
+  "title": "Bitcoin [BTC]: Venezuela transacts record number of BTC trades as Petro fails to get support",
+  "content": "Venezuela’s economy has been under constant strain for a while now as the country’s fiat currency continues to plummet in valuation. A massive hyperinflation rate of 2 million percent crippled the country to its core and according to reports, the situation might get worse as the rate is expected to reach 8 million percent by the end of 2019. In an attempt to salvage something, President Nicolas Maduro urged his fellow countrymen to invest in the highly controversial cryptocurrency, Petro, and indicated that it was the last beacon of hope for the country to consistently run its operations. However, the plea did not work in Petro’s favor as reports suggest that the citizens of Venezuela have more confidence in the stability of Bitcoin [BTC].   Source: Coin DanceAccording to data released by Coin Dance, Venezuela transacted the highest amount of hyper-inflated bolivars for Bitcoins on Localbitcoins exchange, surpassing the previous high which was witnessed two weeks prior to the current development.The data was monitored after resources were tracked on the trading volumes of Localbitcoins, Paxful, and Bisq. The released data showed that a total volume of around 36 billion in Venezuelan Bolivars [VES] was traded for Bitcoin on the exchange. The current volume exceeded the 31.3 billion VES achieved earlier this month.In terms of worldwide adoption of Bitcoin [BTC], the trade volume implosion is huge for the largest cryptocurrency in the world.As reported earlier by IIB, the US issued strict international sanctions against Petro, preventing the US population from investing in the Venezuelan cryptocurrency. Petro is identified as a fraud virtual asset by many as it suffers a lack of liquidity.The post Bitcoin [BTC]: Venezuela transacts record number of BTC trades as Petro fails to get support appeared first on AMBCrypto.",
+  "crawler": "bitcoinwarriornet",
+  "pub_date": "1556732616",
+  "created": "1556732764",
+  "source": "https://bitcoinwarrior.net/2019/05/bitcoin-btc-venezuela-transacts-record-number-of-btc-trades-as-petro-fails-to-get-support/",
+  "images": [
+    "https://i2.wp.com/ambcrypto.sfo2.digitaloceanspaces.com/2019/04/Venezuela.png?resize=696%2C301&ssl=1"
+  ],
+  "videos": [],
+  "links": null,
+  "excerpt": "Venezuela’s economy has been under constant strain for a while now as the country’s fiat currency continues to plummet in valuation. A massive hyperinflation rate of 2 million percent crippled the …",
+  "lang": "eng",
+  "summary": "Venezuela’s economy has been under constant strain for a while now as the country’s fiat currency continues to plummet in valuation. \n\nA massive hyperinflation rate of 2 million percent crippled the country to its core and according to reports, the situation might get worse as the rate is expected to reach 8 million percent by the end of 2019. \n\nIn an attempt to salvage something, President Nicolas Maduro urged his fellow countrymen to invest in the highly controversial cryptocurrency, Petro, and indicated that it was the last beacon of hope for the country to consistently run its operations. \n\nHowever, the plea did not work in Petro’s favor as reports suggest that the citizens of Venezuela have more confidence in the stability of Bitcoin [BTC]. \n\nSource: Coin DanceAccording to data released by Coin Dance, Venezuela transacted the highest amount of hyper-inflated bolivars for Bitcoins on Localbitcoins exchange, surpassing the previous high which was witnessed two weeks prior to the current development.",
+  "weight": 0,
+  "a_sentiment": -3.495059770092876,
+  "a_impact": 0,
+  "a_crypto_assets": [
+    "BITCOIN"
+  ],
+  "a_cryptocurrencies": [
+    {
+      "label": "ASSET",
+      "start": 529,
+      "end": 535,
+      "text": "beacon"
+    },
+    {
+      "label": "ASSET",
+      "start": 735,
+      "end": 742,
+      "text": "Bitcoin"
+    },
+    {
+      "label": "ASSET",
+      "start": 744,
+      "end": 747,
+      "text": "BTC"
+    }
+  ],
+  "a_persons": [
+    {
+      "label": "PERSON",
+      "start": 390,
+      "end": 404,
+      "text": "Nicolas Maduro"
+    }
+  ],
+  "a_companies": null,
+  "a_organizations": null,
+  "a_locations": [
+    {
+      "label": "LOCATION",
+      "start": 0,
+      "end": 9,
+      "text": "Venezuela"
+    }
+  ],
+  "a_exchanges": null,
+  "a_misc": null,
+  "a_tags": [
+    "Bitcoin",
+    "BTC",
+    "BITCOIN",
+    "beacon",
+    "Nicolas Maduro",
+    "Venezuela",
+    "BEACON"
+  ]
+}

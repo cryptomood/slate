@@ -15,6 +15,7 @@ includes:
   - errors
 
 search: true
+
 ---
 
 # Introduction
@@ -219,10 +220,8 @@ let max = api.kittens.delete(2);
 > The above command returns JSON structured like this:
 
 ```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
+<%= partial "includes/wat.json" %>
+
 ```
 
 This endpoint deletes a specific kitten.
@@ -237,3 +236,5 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
+
+<%= partial "sections/01_introduction/01_introduction.md" %>

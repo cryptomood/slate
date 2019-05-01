@@ -1,0 +1,78 @@
+# social.twitter
+
+Twitter posts
+
+> Example data
+
+```json
+<%= partial "sections/04_social.twitter/04_social.twitter.json" %>
+```
+### Example entry
+
+Key | Type | Description
+--------- | ----------- | -----------
+id | string | unique identifier with schema <timestamp>_<domain>_<hash>
+title | string | 
+content | string | tweet
+crawler | string | 
+pub_date | string | timestamp representing the datetime, when the tweet has been published
+created | string | timestamp representing acquisition datetime
+source | string | public url pointing to tweet
+images | []string | list of image sources
+videos | []string | list of video sources
+links | []string | list of off-page hyperlinks
+excerpt | string | summary provided by the domain
+lang | string | identified language
+summary | string | programatically created excerpt
+weight | number | importance of the tweet's creator
+tw_favourite_count | number | 
+tw_filter_level | string | 
+tw_id_str | string | 
+tw_in_reply_to_screen_name | string | 
+tw_in_reply_to_status_id_str | string | 
+tw_in_reply_to_user_id_str | string | 
+tw_is_quote_status | string | 
+tw_lang | string | 
+tw_possibly_sensitive | bool | 
+tw_quote_count | number | 
+tw_reply_count | number | 
+tw_retweet_count | number | 
+tw_user_mentions | string | 
+tw_source | string | 
+tw_author_created_at | string | 
+tw_author_default_profile | bool | 
+tw_author_default_profile_image | string | 
+tw_author_followers_count | number | 
+tw_author_friends_count | number | 
+tw_author_id_str | string | 
+tw_author_lang | string | 
+tw_author_location | string | 
+tw_author_name | string | 
+tw_author_screen_name | string | 
+tw_author_profile_image_url_https | string | 
+tw_author_statuses_count | number | 
+tw_categories | []string | 
+a_sentiment | number | analyzed sentiment
+a_impact | number | analyzed impact in the respective area
+a_crypto_assets | []string | list of crypto assets
+a_assets | []NamedEntity | recognized assets
+a_persons | []NamedEntity | recognized persons
+a_companies | []NamedEntity | recognized companies
+a_locations | []NamedEntity | recognized locations
+a_exchanges | []NamedEntity | recognized exchanges
+a_misc | []NamedEntity | recognized misc objects
+a_tags | []string | list of assigned tags
+
+For schema of NamedEntity object, refer to this [section](#namedentity-response-object)
+                                                       
+
+> Subscribing to news.article event
+
+```javascript
+wsConnection.addEventListener('message', function (event) {
+  var parsed = JSON.parse(event.data)
+  if (parsed.subject === "social.twitter") {
+    console.log(parsed.data)
+  }
+})
+```

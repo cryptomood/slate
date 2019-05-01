@@ -1,0 +1,75 @@
+{
+  "id": "1556734124_twitter_b176b7af6e72976d5f549aa3f412ceb2163225d0",
+  "title": "",
+  "content": "Amazon has said that “Ethereum is well suited for highly distributed blockchain networks where transparency of data for all members is important”. $ETH #ETH $BTC https://t.co/GiIdg0L1Cf … via @YahooFinance https://t.co/GiIdg0L1Cf via @YahooFinance",
+  "crawler": "twitter",
+  "pub_date": "1556734124",
+  "created": "1556734129",
+  "source": "https://twitter.com/statuses/1123650474740191232",
+  "images": null,
+  "videos": null,
+  "links": [
+    "https://twitter.com/i/web/status/1123650474740191232"
+  ],
+  "excerpt": "Amazon has said that “Ethereum is well suited for highly distributed blockchain networks where transparency of data… https://t.co/jcXj1ZPFHh",
+  "lang": "en",
+  "summary": "Amazon has said that “Ethereum is well suited for highly distributed blockchain networks where transparency of data… https://t.co/jcXj1ZPFHh",
+  "weight": 27.764797924608086,
+  "tw_favourite_count": 0,
+  "tw_filter_level": "low",
+  "tw_id_str": "1123650474740191232",
+  "tw_in_reply_to_screen_name": "",
+  "tw_in_reply_to_status_id_str": "",
+  "tw_in_reply_to_user_id_str": "",
+  "tw_is_quote_status": "",
+  "tw_lang": "en",
+  "tw_possibly_sensitive": false,
+  "tw_quote_count": 0,
+  "tw_reply_count": 0,
+  "tw_retweet_count": 0,
+  "tw_user_mentions": "",
+  "tw_source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "tw_author_created_at": "Thu Jul 09 03:23:22 +0000 2009",
+  "tw_author_default_profile": false,
+  "tw_author_default_profile_image": "http://pbs.twimg.com/profile_images/1019016726854262785/nyRUJcIW_normal.jpg",
+  "tw_author_followers_count": 820,
+  "tw_author_friends_count": 562,
+  "tw_author_id_str": "55127235",
+  "tw_author_lang": "en",
+  "tw_author_location": "Brooklyn, New York",
+  "tw_author_name": "radioheadfloyd",
+  "tw_author_screen_name": "radioheadfloyd",
+  "tw_author_profile_image_url_https": "https://pbs.twimg.com/profile_images/1019016726854262785/nyRUJcIW_normal.jpg",
+  "tw_author_statuses_count": 19511,
+  "tw_categories": null,
+  "a_sentiment": 9.262376433180595,
+  "a_impact": 0,
+  "a_crypto_assets": [
+    "ETHEREUM"
+  ],
+  "a_assets": [
+    {
+      "label": "ASSET",
+      "start": 152,
+      "end": 155,
+      "text": "ETH"
+    },
+    {
+      "label": "ASSET",
+      "start": 162,
+      "end": 165,
+      "text": "BTC"
+    }
+  ],
+  "a_persons": null,
+  "a_companies": null,
+  "a_locations": null,
+  "a_exchanges": null,
+  "a_misc": null,
+  "a_tags": [
+    "ETH",
+    "BTC",
+    "ETHEREUM",
+    "BITCOIN"
+  ]
+}

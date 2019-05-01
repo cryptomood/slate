@@ -1,0 +1,53 @@
+# news.article
+
+Articles are common entries published on various websites. 
+They are using the same schema, no matter which domain they originate from.
+
+> Example data
+
+```json
+<%= partial "sections/03_news.article/03_news.article.json" %>
+```
+### Example entry
+
+Key | Type | Description
+--------- | ----------- | -----------
+id | string | unique identifier with schema <timestamp>_<domain>_<hash>
+title | string | title of article
+content | string | full content stripped of unnecessary characters(js, html tags...)
+crawler | string | 
+pub_date | string | timestamp representing the datetime, when the article has been published
+created | string | timestamp representing acquisition datetime
+source | string | url of article
+images | []string | list of image sources
+videos | []string | list of video sources
+links | []string | list of off-page hyperlinks
+excerpt | string | summary provided by the domain
+lang | string | identified language
+summary | string | programatically created excerpt
+weight | number | importance of the article's creator
+a_sentiment | number | analyzed sentiment
+a_impact | number | analyzed impact in the respective area
+a_crypto_assets | []string | list of crypto assets
+a_cryptocurrencies | []NamedEntity | recognized cryptocurrencies
+a_persons | []NamedEntity | recognized persons
+a_companies | []NamedEntity | recognized companies
+a_organizations | []NamedEntity | recognized organizations
+a_locations | []NamedEntity | recognized locations
+a_exchanges | []NamedEntity | recognized exchanges
+a_misc | []NamedEntity | recognized misc objects
+a_tags | []string | list of assigned tags
+
+For schema of NamedEntity object, refer to this [section](#namedentity-response-object)
+                                                       
+
+> Subscribing to news.article event
+
+```javascript
+wsConnection.addEventListener('message', function (event) {
+  var parsed = JSON.parse(event.data)
+  if (parsed.subject === "news.article") {
+    console.log(parsed.data)
+  }
+})
+```

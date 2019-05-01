@@ -1,0 +1,46 @@
+# social.telegram
+
+Messages from telegram groups
+
+> Example data
+ 
+```json
+<%= partial "sections/06_social.telegram/06_social.telegram.json" %>
+```
+### Example entry
+
+Key | Type | Description
+--------- | ----------- | -----------
+id | string | unique identifier with schema <timestamp>_<domain>_<hash>
+pub_date | string | timestamp representing the datetime, when the tweet has been published
+created | string | timestamp representing acquisition datetime
+user | string |
+message | string |
+source | string |
+crawler | string |
+weight | number | importance of the article's creator
+channel_id | number | id for message's channel
+channel_subscriber_count | number | number of subscribers
+a_sentiment | number | analyzed sentiment
+a_impact | number | analyzed impact in the respective area
+a_crypto_assets | []string | list of crypto assets
+a_assets | []NamedEntity | recognized assets
+a_persons | []NamedEntity | recognized persons
+a_companies | []NamedEntity | recognized companies
+a_locations | []NamedEntity | recognized locations
+a_exchanges | []NamedEntity | recognized exchanges
+a_misc | []NamedEntity | recognized misc objects
+a_tags | []string | list of assigned tags
+
+For schema of NamedEntity object, refer to this [section](#namedentity-response-object)                                                   
+
+> Subscribing to social.telegram event
+
+```javascript
+wsConnection.addEventListener('message', function (event) {
+  var parsed = JSON.parse(event.data)
+  if (parsed.subject === "social.telegram") {
+    console.log(parsed.data)
+  }
+})
+```

@@ -1,0 +1,32 @@
+{
+  "weight" : 0.01,
+  "a_impact" : 0.0,
+  "a_locations" : null,
+  "a_misc" : null,
+  "user" : "Tony1",
+  "source" : "Tony1@BitmexChat",
+  "crawler" : "bitmexchat",
+  "a_persons" : null,
+  "a_exchanges" : null,
+  "id" : "1556031204_bitmexchat_da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "message" : "LTC meltdown: I just hope we can all be civil LOL",
+  "a_sentiment" : -4.89267816855961,
+  "a_crypto_assets" : [
+    "LITECOIN"
+  ],
+  "a_assets" : [
+    {
+      "label" : "ASSET",
+      "start" : 0,
+      "end" : 3,
+      "text" : "LTC"
+    }
+  ],
+  "pub_date" : "1556031204",
+  "created" : "1556031206",
+  "a_companies" : null,
+  "a_tags" : [
+    "LTC",
+    "LITECOIN"
+  ]
+}
