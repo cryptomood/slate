@@ -1,0 +1,40 @@
+# Historic data
+
+These data are provided via classic json api - http requests:
+
+`<protocol>://api.cryptomood.com:<port>/?apiKey=<apiKey>&request=historic.<eventsGroup>&from=<fromTimestamp>&to=<toTimestamp>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+protocol | ws or wss
+port | 80 or 433 - non secure or secure tls connection
+apiKey | the identification string which should be provided for your account
+eventsGroup | could be one of "news.sentiment", "social.sentiment"
+from | timestamp representing start of the time window
+to | timestamp representing end of the time window
+
+For later version we are planning to support all event types for eventsGroup value, be it "news.article" or latter.
+
+
+> Example data
+ 
+```json
+<%= partial "sections/11_historic_data/11_historic_data.json" %>
+```
+### Fields
+
+Key | Type | Description
+--------- | ----------- | -----------
+from | string | timestamp as in request parameters
+to | string | timestamp as in request parameterse
+items | []\<T\> | list of items for current request type
+
+Type T represents different types for each eventGroup type - is it the same as the data object retrieved
+via event of the same type.
+
+[](#lt-type-gt-sentiment)
+<aside class="notice">
+Right now, we support only historical sentiment data, so type T would be always the [sentiment entry](#lt-type-gt-sentiment)
+</aside>

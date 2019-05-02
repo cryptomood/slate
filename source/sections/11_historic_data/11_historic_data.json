@@ -1,0 +1,51 @@
+{
+  "from": "1556668800",
+  "to": "1556755200",
+  "items": [
+    {
+      "id": "1556668860_M1_VECHAIN",
+      "asset": "VECHAIN",
+      "close_sentiment_average": 0.0,
+      "high_sentiment_average": -1e+18,
+      "low_sentiment_average": 1e+18,
+      "negative_count": 0,
+      "negative_sum": 0.0,
+      "open_sentiment_average": 0.0,
+      "positive_count": 0,
+      "positive_sum": 0.0,
+      "resolution": "M1",
+      "sentiment_avg": 0.0,
+      "time": "1556668860"
+    },
+    {
+      "id": "1556668860_M1_DOGECOIN",
+      "asset": "DOGECOIN",
+      "close_sentiment_average": 0.0,
+      "high_sentiment_average": -1e+18,
+      "low_sentiment_average": 1e+18,
+      "negative_count": 0,
+      "negative_sum": 0.0,
+      "open_sentiment_average": 0.0,
+      "positive_count": 0,
+      "positive_sum": 0.0,
+      "resolution": "M1",
+      "sentiment_avg": 0.0,
+      "time": "1556668860"
+    },
+    {
+      "id": "1556668860_M1_BITCOIN",
+      "asset": "BITCOIN",
+      "close_sentiment_average": 5.79079329993868,
+      "high_sentiment_average": 9.98097173335878,
+      "low_sentiment_average": -8.26930256117314,
+      "negative_count": 2,
+      "negative_sum": -382.279404240409,
+      "open_sentiment_average": -8.26930256117314,
+      "positive_count": 9,
+      "positive_sum": 905.791808458639,
+      "resolution": "M1",
+      "sentiment_avg": 47.5920367471118,
+      "time": "1556668860"
+    }
+  ]
+}
