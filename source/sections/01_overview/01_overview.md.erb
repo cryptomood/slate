@@ -1,0 +1,38 @@
+# Version
+<%= partial "sections/01_overview/01_version.txt" %>
+
+# Overview
+
+The Cryptomood API provides you real-time or historic data of market sentiment, or simple processed entries.
+Currently we are providing means to access realtime news and realtime sentiment analysis output via websockets (PUB-SUB schema).
+Historical data are provided via classical json api.
+
+Broadcast messages are always json-encoded wrappers. Unmarshalled, they have the following structure:
+
+Key | Type | Description
+--------- | ----------- | -----------
+`subject` | string | message type
+`data` | object | the actual payload
+
+In this documentation, we are using the data field as a result.
+
+## Publications
+
+### Social publications
+
+Social publication are created by crawling specific social networks, namely twitter, reddit, telegram, discord, bitmex chat.
+
+### News publications
+
+Entries, which are crawled from various websites are aliased as "news".
+
+### Video publications
+
+Crawled video pages from youtube.
+
+## Publisher
+
+Here is the list of all crawlers we are using right now:
+
+<%= partial "sections/01_overview/01_crawlers.csv" %>
+

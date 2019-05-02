@@ -1,14 +1,13 @@
-# news.article
+# News
 
-Articles are common entries published on various websites. 
-They are using the same schema, no matter which domain they originate from.
+For subscribing to new article entries, use event named `news.article`.
 
 > Example data
 
 ```json
-<%= partial "sections/03_news.article/03_news.article.json" %>
+<%= partial "sections/03_news/03_news.json" %>
 ```
-### Fields
+### Article
 
 Key | Type | Description
 --------- | ----------- | -----------
@@ -29,13 +28,13 @@ weight | number | importance of the article's creator
 a_sentiment | number | analyzed sentiment
 a_impact | number | analyzed impact in the respective area
 a_crypto_assets | []string | list of crypto assets
-a_cryptocurrencies | []NamedEntity | recognized cryptocurrencies
-a_persons | []NamedEntity | recognized persons
-a_companies | []NamedEntity | recognized companies
-a_organizations | []NamedEntity | recognized organizations
-a_locations | []NamedEntity | recognized locations
-a_exchanges | []NamedEntity | recognized exchanges
-a_misc | []NamedEntity | recognized misc objects
+a_cryptocurrencies | [][NamedEntity](#namedentity-response-object) | recognized cryptocurrencies
+a_persons | [][NamedEntity](#namedentity-response-object) | recognized persons
+a_companies | [][NamedEntity](#namedentity-response-object) | recognized companies
+a_organizations | [][NamedEntity](#namedentity-response-object) | recognized organizations
+a_locations | [][NamedEntity](#namedentity-response-object) | recognized locations 
+a_exchanges | [][NamedEntity](#namedentity-response-object) | recognized exchanges
+a_misc | [][NamedEntity](#namedentity-response-object) | recognized misc objects
 a_tags | []string | list of assigned tags
 
 For schema of NamedEntity object, refer to this [section](#namedentity-response-object)

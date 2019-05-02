@@ -1,41 +1,25 @@
-# \<type\>.sentiment
+# Sentiment
 
-Sentiment events are divided to two groups - "news" and "social":
+Sentiment message holds informations about aggregated sentiment for spcecific time window.
+It is emitted every second for each asset and resolution. If your application needs to receive sentiment updates
+for only one specific asset, it need to be filtered on your side (more in the examples).
 
-Event | Description
---------- | ----------- | -----------
-news.sentiment | sentiment data only for articles - aggregated sentiment from news.article events
-social.sentiment | sentiment data for other (all social types) entries
+Sentiment updated are divided to two basic groups below. Their payload is the same.
 
-Their payload is the same.
+### News sentiment
 
+Each new article emitted via [news.article](#news). For subscribing, use event `news.sentiment`.
+
+### Social sentiment
+
+Each new social entry emitted via `social.<subType>` event, where `subType` can be one of [social types](#social).
+ 
+### SentimentCandle
 > Example data
  
 ```json
 <%= partial "sections/09_sentiments/09_sentiments.json" %>
 ```
-### Fields
-
-Key | Type | Description
---------- | ----------- | -----------
-id | string | unique identifier
-time | string | timestamp representing start of the timeframe
-resolution | string | constant representing timeframe width - M1 or H1
-asset | string | crypto asset
-negative_sum | number | sum of all negative values
-negative_count | number | counted negative occurences
-positive_sum | number | sum of all positive values
-positive_count | number | counted positive occurences
-sentiment_avg | number |
-open_sentiment_average | number |
-high_sentiment_average | number |
-low_sentiment_average | number |
-close_sentiment_average | number |
-
-[](https://en.wikipedia.org/wiki/Open-high-low-close_chart)
-<aside class="notice">
-Last four keys represent [OHLC chart](https://en.wikipedia.org/wiki/Open-high-low-close_chart)
-</aside>
 
 > Subscribing to sentiment event
 
@@ -48,3 +32,24 @@ wsConnection.addEventListener('message', function (event) {
   }
 })
 ```
+
+Key | Type | Description
+--------- | ----------- | -----------
+`id` | string | unique identifier
+`time` | string | timestamp representing start of the timeframe
+`resolution` | string | constant representing timeframe width - M1 or H1
+`asset` | string | crypto asset
+`negative_sum` | number | sum of all negative values
+`negative_count` | number | counted negative occurences
+`positive_sum` | number | sum of all positive values
+`positive_count` | number | counted positive occurences
+`sentiment_avg` | number |
+`open_sentiment_average` | number |
+`high_sentiment_average` | number |
+`low_sentiment_average` | number |
+`close_sentiment_average` | number |
+
+[](https://en.wikipedia.org/wiki/Open-high-low-close_chart)
+<aside class="notice">
+Last four keys represent [OHLC chart](https://en.wikipedia.org/wiki/Open-high-low-close_chart)
+</aside>

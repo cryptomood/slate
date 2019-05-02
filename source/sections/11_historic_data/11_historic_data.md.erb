@@ -8,12 +8,12 @@ These data are provided via classic json api - http requests:
 
 Parameter | Description
 --------- | -----------
-protocol | ws or wss
-port | 80 or 433 - non secure or secure tls connection
-apiKey | the identification string which should be provided for your account
-eventsGroup | could be one of "news.sentiment", "social.sentiment"
-from | timestamp representing start of the time window
-to | timestamp representing end of the time window
+`protocol` | ws or wss
+`port` | 80 or 433 - non secure or secure tls connection
+`apiKey` | the identification string which should be provided for your account
+`eventsGroup` | could be one of "news.sentiment", "social.sentiment"
+`from` | timestamp representing start of the time window
+`to` | timestamp representing end of the time window
 
 For later version we are planning to support all event types for eventsGroup value, be it "news.article" or latter.
 
@@ -23,16 +23,29 @@ For later version we are planning to support all event types for eventsGroup val
 ```json
 <%= partial "sections/11_historic_data/11_historic_data.json" %>
 ```
-### Fields
+### HistoricData
 
 Key | Type | Description
 --------- | ----------- | -----------
-from | string | timestamp as in request parameters
-to | string | timestamp as in request parameterse
-items | []\<T\> | list of items for current request type
+`from` | string | timestamp as in request parameters
+`to` | string | timestamp as in request parameterse
+`items` | []\<T\> | list of items for current request type
 
 Type T represents different types for each eventGroup type - is it the same as the data object retrieved
 via event of the same type.
+
+> Requesting historic sentiments 
+
+```javascript
+const apiKey="0123456789"; // use your own key
+fetch(`https://api.cryptomood.com/?apiKey={apiKey}&request=historic.social.sentiment&from=1556668800&to=1556755200`)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(jsonData) {
+    console.log(JSON.stringify(jsonData));
+  });
+```
 
 [](#lt-type-gt-sentiment)
 <aside class="notice">

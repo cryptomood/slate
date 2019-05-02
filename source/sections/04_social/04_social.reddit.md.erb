@@ -1,13 +1,25 @@
-# social.reddit
+## Reddit
 
-Posts from reddit
+For subscribing to new posts from reddit, use event named `social.reddit`.
 
 > Example data
  
 ```json
-<%= partial "sections/05_social.reddit/05_social.reddit.json" %>
+<%= partial "sections/04_social/04_social.reddit.json" %>
 ```
-### Fields
+
+> Subscribing to social.reddit event
+
+```javascript
+wsConnection.addEventListener('message', function (event) {
+  var parsed = JSON.parse(event.data)
+  if (parsed.subject === "social.reddit") {
+    console.log(parsed.data)
+  }
+})
+```
+
+### RedditMsg
 
 Key | Type | Description
 --------- | ----------- | -----------
@@ -39,7 +51,7 @@ subreddit_id | string |
 post_id | string |
 is_self | bool |
 selftext | string |
-reply_tree | []RedditComment | list of comments
+reply_tree | [][RedditComment](#reddit-comment-response-object) | list of comments
 hidden | bool |
 link_flair_css_class | string |
 link_flair_text | string |
@@ -54,24 +66,9 @@ weight | number |
 a_sentiment | number | analyzed sentiment
 a_impact | number | analyzed impact in the respective area
 a_crypto_assets | []string | list of crypto assets
-a_cryptocurrencies | []NamedEntity | recognized cryptocurrencies
-a_persons | []NamedEntity | recognized persons
-a_companies | []NamedEntity | recognized companies
-a_locations | []NamedEntity | recognized locations
-a_misc | []NamedEntity | recognized misc objects
+a_cryptocurrencies | [][NamedEntity](#namedentity-response-object) | recognized cryptocurrencies
+a_persons | [][NamedEntity](#namedentity-response-object) | recognized persons
+a_companies | [][NamedEntity](#namedentity-response-object) | recognized companies
+a_locations | [][NamedEntity](#namedentity-response-object) | recognized locations
+a_misc | [][NamedEntity](#namedentity-response-object) | recognized misc objects
 a_tags | []string | list of assigned tags
-
-For schema of RedditComment object, refer to this [section](#reddit-comment-response-object)
-
-For schema of NamedEntity object, refer to this [section](#namedentity-response-object)
-                                                       
-> Subscribing to social.reddit event
-
-```javascript
-wsConnection.addEventListener('message', function (event) {
-  var parsed = JSON.parse(event.data)
-  if (parsed.subject === "social.reddit") {
-    console.log(parsed.data)
-  }
-})
-```

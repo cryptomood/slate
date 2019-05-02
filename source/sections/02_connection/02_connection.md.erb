@@ -10,16 +10,6 @@ which is intended for the future.
 
 ### Connection string
 
-`<protocol>://api.cryptomood.com:<port>/?apiKey=<apiKey>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-protocol | ws or wss
-port | 80 or 433 - non secure or secure tls connection
-apiKey | the identification string which should be provided for your account
-
 > Connection via native websocket implementation 
 
 ```javascript
@@ -32,6 +22,19 @@ var wsConnection = new WebSocket('wss://api.cryptomood.com?apiKey=' + apiKey);
 ```javascript
 var eventName="eventName"
 wsConnection.addEventListener('message', function (event) {
-    ...
+    var parsed = JSON.parse(event.data)
+    if (parsed.subject === eventName) {
+      console.log(parsed.data)
+    }
 });
 ```
+
+`<protocol>://api.cryptomood.com:<port>/?apiKey=<apiKey>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+protocol | ws or wss
+port | 80 or 433 - non secure or secure tls connection
+apiKey | the identification string which should be provided for your account

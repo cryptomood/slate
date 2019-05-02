@@ -1,0 +1,45 @@
+## Telegram
+
+For subscribing to new messages from telegram, use event named `social.telegram`.
+
+> Example data
+ 
+```json
+<%= partial "sections/04_social/04_social.telegram.json" %>
+```
+
+> Subscribing to social.telegram event
+
+```javascript
+wsConnection.addEventListener('message', function (event) {
+  var parsed = JSON.parse(event.data)
+  if (parsed.subject === "social.telegram") {
+    console.log(parsed.data)
+  }
+})
+```
+
+### TelegramUserMsg
+
+Key | Type | Description
+--------- | ----------- | -----------
+`id` | string | unique identifier with schema <timestamp>_<domain>_<hash>
+`pub_date` | string | timestamp representing the datetime, when the tweet has been published
+`created` | string | timestamp representing acquisition datetime
+`user` | string |
+`message` | string |
+`source` | string |
+`crawler` | string |
+`weight` | number | importance of the article's creator
+`channel_id` | number | id for message's channel
+`channel_subscriber_count` | number | number of subscribers
+`a_sentiment` | number | analyzed sentiment
+`a_impact` | number | analyzed impact in the respective area
+`a_crypto_assets` | []string | list of crypto assets
+`a_assets` | [][NamedEntity](#namedentity-response-object) | recognized assets
+`a_persons` | [][NamedEntity](#namedentity-response-object) | recognized persons
+`a_companies` | [][NamedEntity](#namedentity-response-object) | recognized companies
+`a_locations` | [][NamedEntity](#namedentity-response-object) | recognized locations
+`a_exchanges` | [][NamedEntity](#namedentity-response-object) | recognized exchanges
+`a_misc` | [][NamedEntity](#namedentity-response-object) | recognized misc objects
+`a_tags` | []string | list of assigned tags
