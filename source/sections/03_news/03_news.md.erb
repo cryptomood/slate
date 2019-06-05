@@ -7,6 +7,27 @@ For subscribing to new article entries, use event named `news.article`.
 ```json
 <%= partial "sections/03_news/03_news.json" %>
 ```
+
+> Subscribing to news.article event
+
+```javascript
+wsConnection.addEventListener('message', function (event) {
+  var parsed = JSON.parse(event.data)
+  if (parsed.kind === "article") {
+    console.log(parsed.data)
+  }
+})
+```
+
+```golang
+go func() {
+    for out := range client.Output {
+        fmt.Println(out)
+    }
+}
+client.Subscribe(cryptomood_b2b.SubscribableModels.Article)
+```
+
 ### Article
 
 Key | Type | Description
@@ -37,16 +58,4 @@ a_exchanges | [][NamedEntity](#namedentity-response-object) | recognized exchang
 a_misc | [][NamedEntity](#namedentity-response-object) | recognized misc objects
 a_tags | []string | list of assigned tags
 
-For schema of NamedEntity object, refer to this [section](#namedentity-response-object)
-                                                       
-
-> Subscribing to news.article event
-
-```javascript
-wsConnection.addEventListener('message', function (event) {
-  var parsed = JSON.parse(event.data)
-  if (parsed.subject === "news.article") {
-    console.log(parsed.data)
-  }
-})
-```
+For schema of NamedEntity object, refer to this [section](#namedentity-response-object)                                                      

@@ -13,10 +13,19 @@ For subscribing to new messages from discord, use event named `social.discord`.
 ```javascript
 wsConnection.addEventListener('message', function (event) {
   var parsed = JSON.parse(event.data)
-  if (parsed.subject === "social.discord") {
+  if (parsed.kind === "discord") {
     console.log(parsed.data)
   }
 })
+```
+
+```golang
+go func() {
+    for out := range client.Output {
+        fmt.Println(out)
+    }
+}
+client.Subscribe(cryptomood_b2b.SubscribableModels.Discord)
 ```
 
 ### DiscordUserMsg
@@ -29,20 +38,21 @@ Key | Type | Description
 `user` | string |
 `message` | string |
 `source` | string |
+`crawler` | string |
 `images` | []string | list of image sources
 `videos` | []string | list of video sources
 `links` | []string | list of off-page hyperlinks
-`crawler` | string | 
 `weight` | number |
-`channel_id` | string |
-`guild_id` | string
 `a_sentiment` | number | analyzed sentiment
 `a_impact` | number | analyzed impact in the respective area
 `a_crypto_assets` | []string | list of crypto assets
 `a_assets` | [][NamedEntity](#namedentity-response-object) | recognized assets
 `a_persons` | [][NamedEntity](#namedentity-response-object) | recognized persons
 `a_companies` | [][NamedEntity](#namedentity-response-object) | recognized companies
+`a_organizations` | [][NamedEntity](#namedentity-response-object) | recognized organizations 
 `a_locations` | [][NamedEntity](#namedentity-response-object) | recognized locations
 `a_exchanges` | [][NamedEntity](#namedentity-response-object) | recognized exchanges
 `a_misc` | [][NamedEntity](#namedentity-response-object) | recognized misc objects
 `a_tags` | []string | list of assigned tags
+`channel_id` | string |
+`guild_id` | string |
